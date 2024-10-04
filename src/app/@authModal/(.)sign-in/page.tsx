@@ -3,12 +3,7 @@ import CloseModal from "@/components/CloseModal";
 import SignIn from "@/components/SignIn";
 import { Dispatch, FC, SetStateAction, useState } from "react";
 
-interface pageProps {
-  goToHome?: boolean;
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
-}
-
-const page: FC<pageProps> = ({}) => {
+const Page: FC = ({}) => {
   const [isOpen, setIsOpen] = useState(true);
   return isOpen ? (
     <div className="fixed inset-0 bg-zinc-900/20 z-10">
@@ -24,4 +19,4 @@ const page: FC<pageProps> = ({}) => {
   ) : null;
 };
 
-export default page;
+export default Page;

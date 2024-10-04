@@ -3,13 +3,8 @@ import CloseModal from "@/components/CloseModal";
 import SignUp from "@/components/SignUp";
 import { Dispatch, FC, SetStateAction, useState } from "react";
 
-interface pageProps {
-  goToHome?: boolean;
-  setIsOpen: Dispatch<SetStateAction<boolean>>;
-}
-
-const page: FC<pageProps> = ({}) => {
-  const [isOpen, setIsOpen] = useState(true); 
+const Page: FC = ({}) => {
+  const [isOpen, setIsOpen] = useState(true);
   return isOpen ? (
     <div className="fixed inset-0 bg-zinc-900/20 z-10">
       <div className="container flex items-center h-full max-w-lg mx-auto">
@@ -24,4 +19,4 @@ const page: FC<pageProps> = ({}) => {
   ) : null;
 };
 
-export default page;
+export default Page;
